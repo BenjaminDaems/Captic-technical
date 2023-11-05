@@ -20,8 +20,8 @@ Om de foto's zo goed mogelijk te clusteren is het aangeraden om zo weinig mogeli
 ### Cropping
 In de voorbeeldfoto's bestaat een groot deel van de foto uit de achtergrond. Deze is niet relevant voor het detecteren van deffecgten op de capsule, dus deze wordt best verwijdert.
 Vb. \
-![Originele afbeelding](images\Screenshot_2023-10-28_at_14.32.45.png)
-![gecropte afbeelding](images\crop_1.png)
+![Originele afbeelding](images/Screenshot_2023-10-28_at_14.32.45.png)
+![gecropte afbeelding](images/crop_1.png)
 
 Dit kan bekomen worden door een bounding box te maken met behulp van een threshold.
 ```py
@@ -49,8 +49,8 @@ De originele foto's bevatten veel detail dat niet nodig is voor de clustering.
 Door het totaal aantal kleuren in de foto te verminderen kan men de data minder complex maken. Dit kan clustering eenvoudiger en correcter maken.
 
 Vb. Kmeans clustering (6 kleuren) \
-![originele gecropte afbeelding](images\crop_1.png)
-![reduced gecropte afbeelding](images\reduced_1.png)
+![originele gecropte afbeelding](images/crop_1.png)
+![reduced gecropte afbeelding](images/reduced_1.png)
 
 De foto met het gereduceerde kleurenpalet heeft nu minder detail, maar het defect is nog steeds zeer goed zichtbaar. Het aantal kleuren kan worden aangepast als er meer of minder kleurendetail nodig is.
 
