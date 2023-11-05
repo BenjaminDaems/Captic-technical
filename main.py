@@ -15,7 +15,7 @@ def save_metadata(filepath, image):
 		"filesize": filepath.stat().st_size,
 	}
 
-	metadata_filepath = pathlib.Path("output", f"{filepath.stem}.json")
+	metadata_filepath = pathlib.Path("/app/output", f"{filepath.stem}.json")
 	with open(metadata_filepath, "w") as f:
 		json.dump(metadata, f)
 
@@ -24,13 +24,11 @@ def save_metadata(filepath, image):
 
 def main():
 	args = sys.argv[1:]
-	print(args)
 	if len(args) != 1:
 		print("Usage: python main.py <filepath>")
 		sys.exit(1)
 	try:
 		filepath = pathlib.Path(args[0]).resolve(strict=True)
-		print(filepath)
 	except FileNotFoundError:
 		print("File not found")
 		sys.exit(1)
