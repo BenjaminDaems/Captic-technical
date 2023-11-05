@@ -28,7 +28,7 @@ def main():
 		print("Usage: python main.py <filepath>")
 		sys.exit(1)
 	try:
-		filepath = pathlib.Path(args[0]).resolve(strict=True)
+		filepath = pathlib.Path(f"/app/images/{args[0]}").resolve(strict=True)
 	except FileNotFoundError:
 		print("File not found")
 		sys.exit(1)
